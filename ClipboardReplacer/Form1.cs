@@ -33,6 +33,16 @@ namespace ClipboardReplacer
                 Clipboard.SetData(formats[0], new MemoryStream(newArray));
                 toolStripStatusLabel1.Text = $"Replaced {count} times";
             }
+            else if (data is byte[])
+            {
+                var array = (data as byte[]);
+                var source = Encoding.Unicode.GetBytes(tbSource.Text);
+                var dest = Encoding.Unicode.GetBytes(tbDest.Text);
+                int count = 0;
+                var newArray = Replace(array, source, dest, out count);
+                Clipboard.SetData(formats[0], newArray);
+                toolStripStatusLabel1.Text = $"Replaced {count} times";
+            }
             else if (data is String)
             {
                 var newString = (data as String).Replace(tbSource.Text, tbDest.Text);
@@ -41,7 +51,7 @@ namespace ClipboardReplacer
             }
             else
             {
-                toolStripStatusLabel1.Text = "Unknown format";
+                toolStripStatusLabel1.Text = "Unsupported format";
             };
         }
 
