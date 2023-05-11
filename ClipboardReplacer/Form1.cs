@@ -97,6 +97,12 @@ namespace ClipboardReplacer
 
             return result.ToArray();
         }
+
+        private void btnMove_Click(object sender, EventArgs e)
+        {
+            tbSource.Text = tbDest.Text;
+            tbDest.Text = "";
+        }
     }
 
 }

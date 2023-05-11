@@ -36,12 +36,13 @@ namespace ClipboardReplacer
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnMove = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnReplace
             // 
-            this.btnReplace.Location = new System.Drawing.Point(344, 4);
+            this.btnReplace.Location = new System.Drawing.Point(411, 4);
             this.btnReplace.Name = "btnReplace";
             this.btnReplace.Size = new System.Drawing.Size(75, 23);
             this.btnReplace.TabIndex = 3;
@@ -58,7 +59,7 @@ namespace ClipboardReplacer
             // 
             // tbDest
             // 
-            this.tbDest.Location = new System.Drawing.Point(209, 6);
+            this.tbDest.Location = new System.Drawing.Point(276, 6);
             this.tbDest.Name = "tbDest";
             this.tbDest.Size = new System.Drawing.Size(129, 20);
             this.tbDest.TabIndex = 2;
@@ -67,9 +68,9 @@ namespace ClipboardReplacer
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 32);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 33);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(430, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(492, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -90,17 +91,28 @@ namespace ClipboardReplacer
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(180, 9);
+            this.label2.Location = new System.Drawing.Point(247, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(23, 13);
             this.label2.TabIndex = 5;
             this.label2.Text = "To:";
             // 
+            // btnMove
+            // 
+            this.btnMove.Location = new System.Drawing.Point(180, 4);
+            this.btnMove.Name = "btnMove";
+            this.btnMove.Size = new System.Drawing.Size(61, 23);
+            this.btnMove.TabIndex = 6;
+            this.btnMove.Text = "From<-To";
+            this.btnMove.UseVisualStyleBackColor = true;
+            this.btnMove.Click += new System.EventHandler(this.btnMove_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(430, 54);
+            this.ClientSize = new System.Drawing.Size(492, 55);
+            this.Controls.Add(this.btnMove);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.statusStrip1);
@@ -126,6 +138,7 @@ namespace ClipboardReplacer
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnMove;
     }
 }
 
